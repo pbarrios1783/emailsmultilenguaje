@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptador de Emails Multilenguaje</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>📧 Adaptador de Emails Multilenguaje</h1>
+        <p>Adapta tus correos según la cultura, formalidad e idioma con nuestra herramienta AI.</p>
+    </header>
+
+    <main>
+        <form id="email-form">
+            <textarea name="email" id="email" placeholder="Escribe tu email aquí..." required rows="10" cols="80"></textarea>
+
+            <label for="cultura">🌍 Cultura del Destinatario:</label>
+            <select id="cultura" name="cultura" required>
+                <option value="Alemania">Alemania</option>
+                <option value="España">España</option>
+                <option value="Latinoamérica">Latinoamérica</option>
+                <option value="Holanda">Holanda</option>
+                <option value="Inglaterra">Inglaterra</option>
+                <option value="Japón">Japón</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+            </select>
+
+            <label for="formalidad">💼 Nivel de Formalidad:</label>
+            <select id="formalidad" name="formalidad" required>
+                <option value="formal">Formal</option>
+                <option value="semiformal">Semiformal</option>
+                <option value="informal">Informal</option>
+            </select>
+
+            <label for="idioma">🌐 Idioma:</label>
+            <select id="idioma" name="idioma" required>
+                <option value="Español castizo">Español castizo</option>
+                <option value="Español latinoamericano">Español latinoamericano</option>
+                <option value="Inglés británico">Inglés británico</option>
+                <option value="Inglés americano">Inglés americano</option>
+                <option value="Alemán">Alemán</option>
+                <option value="Holandés">Holandés</option>
+                <option value="Japonés">Japonés</option>
+                <option value="Francés">Francés</option>
+            </select>
+
+            <button type="submit">Adaptar y Traducir Email</button>
+        </form>
+        
+        <div id="loading" style="display: none;">
+            <img src="/static/images/spinner.gif" alt="Cargando..." />
+            <p>Generando tu email...</p>
+        </div>
+
+        <div id="result">
+            <h2>Email Adaptado:</h2>
+            <textarea id="adapted-email" readonly rows="10" cols="80"></textarea>
+        </div>
+    </main>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
